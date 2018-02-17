@@ -1,0 +1,7 @@
+#!/bin/sh
+
+npm install
+rm -rf doc
+rm -rf RECOMMEND.md
+echo '' > README.md
+rm -rf .git
