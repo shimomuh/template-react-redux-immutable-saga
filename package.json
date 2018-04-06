@@ -6,13 +6,15 @@
     "flow": "flow"
   },
   "dependencies": {
+    "autoprefixer": "8.2.0",
     "gsap": "1.20.4",
     "immutable": "3.8.2",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-redux": "5.0.7",
     "redux": "3.7.2",
-    "redux-saga": "0.16.0"
+    "redux-saga": "0.16.0",
+    "superagent": "3.8.2"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
@@ -28,7 +30,6 @@
     "flowtype": "2.0.0",
     "node-sass": "4.7.2",
     "postcss-easy-import": "3.0.0",
-    "postcss-loader": "2.1.0",
     "sass-loader": "6.0.6",
     "style-loader": "0.20.2",
     "webpack": "3.11.0",
