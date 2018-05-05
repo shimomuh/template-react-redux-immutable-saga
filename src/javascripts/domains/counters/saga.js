@@ -4,6 +4,7 @@
 import { fork, take, put, call } from 'redux-saga/effects'
 import * as CounterRedux from '~/domains/counters/redux'
 import { delay } from '~/adapters/saga'
+//import { XHRpost } from '~/adapters/superagent'
 
 function * animation (): * {
   while (true) {
@@ -15,9 +16,18 @@ function * animation (): * {
   }
 }
 
+//function * xhr (): * {
+//  while (true) {
+//    const { payload } = yield take(CounterRedux.types.reset())
+//    const { data } = yield call(XHRpost, '/test', payload)
+//    yield put(CounterRedux.creators.reset(data))
+//  }
+//}
+
 export function saga (): * {
   return function * (): * {
     yield fork(animation)
+    // yield fork(xhr)
   }
 }
 

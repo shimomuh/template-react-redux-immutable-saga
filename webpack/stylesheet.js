@@ -11,23 +11,30 @@ const stylesheet = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract(
-          {
-            fallback: 'style-loader',
-            use: [
-              { loader: 'css-loader' },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  plugins: () => [
-                    require('postcss-easy-import')({ glob: true }),
-                  ]
-                }
-              },
-              { loader: 'sass-loader' }
-            ]
-          }
-        )
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true,
+                sourceMap: true
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true
+              }
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        })
       }
     ]
   },
