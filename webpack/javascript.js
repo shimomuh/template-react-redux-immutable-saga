@@ -32,9 +32,6 @@ const javascript = {
   plugins: [
     new webpack.ProvidePlugin({
       'React': 'react'
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'javascripts/commons/chunk'
     })
   ],
   devtool: 'source-map',
